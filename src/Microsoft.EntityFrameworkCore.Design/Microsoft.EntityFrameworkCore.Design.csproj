@@ -79,6 +79,14 @@
     <Compile Include="Design\Internal\MigrationsOperations.cs" />
     <Compile Include="Design\OperationException.cs" />
     <Compile Include="Design\OperationExecutor.cs" />
+    <Compile Include="EntityTypeConfiguration\DependentNavigationPropertyConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\EntityTypeConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\KeyConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ManyNavigationPropertyConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ManyToManyNavigationPropertyConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ModelBuilderExtensions.cs" />
+    <Compile Include="EntityTypeConfiguration\PrimitivePropertyConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ReferenceNavigationConfiguration.cs" />
     <Compile Include="Infrastructure\DesignEventId.cs" />
     <Compile Include="Internal\DesignLoggerExtensions.cs" />
     <Compile Include="Migrations\Design\CSharpHelper.cs" />
