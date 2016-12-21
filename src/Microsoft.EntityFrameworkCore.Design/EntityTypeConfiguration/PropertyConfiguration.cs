@@ -11,14 +11,14 @@ namespace Xintricity.DataAccess
     /// Supporting class for EntityTypeConfiguration implementing configuration options for primitive properties.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class PrimitivePropertyConfiguration<T>
+    public class PropertyConfiguration<T>
     {
         private List<Action<PropertyBuilder<T>>> _actions = new List<Action<PropertyBuilder<T>>>();
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public PrimitivePropertyConfiguration()
+        public PropertyConfiguration()
         {
 
         }
@@ -37,7 +37,7 @@ namespace Xintricity.DataAccess
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public PrimitivePropertyConfiguration<T> HasColumnName(string name)
+        public PropertyConfiguration<T> HasColumnName(string name)
         {
             _actions.Add(p => p.HasColumnName(name));
             return this;
@@ -49,7 +49,7 @@ namespace Xintricity.DataAccess
         /// <param name="name"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public PrimitivePropertyConfiguration<T> HasColumnAnnotation( string name, object value)
+        public PropertyConfiguration<T> HasColumnAnnotation( string name, object value)
         {
             _actions.Add(p => p.HasAnnotation(name, value));
             return this;
@@ -59,7 +59,7 @@ namespace Xintricity.DataAccess
         /// 
         /// </summary>
         /// <returns></returns>
-        public PrimitivePropertyConfiguration<T> IsRequired()
+        public PropertyConfiguration<T> IsRequired()
         {
             _actions.Add(p => p.IsRequired());
             return this;
@@ -69,7 +69,7 @@ namespace Xintricity.DataAccess
         /// 
         /// </summary>
         /// <returns></returns>
-        public PrimitivePropertyConfiguration<T> IsOptional()
+        public PropertyConfiguration<T> IsOptional()
         {
             _actions.Add(p => p.IsRequired(false));
             return this;
@@ -80,7 +80,7 @@ namespace Xintricity.DataAccess
         /// </summary>
         /// <param name="maxLength"></param>
         /// <returns></returns>
-        public PrimitivePropertyConfiguration<T> HasMaxLength(int maxLength)
+        public PropertyConfiguration<T> HasMaxLength(int maxLength)
         {
             _actions.Add(p => p.HasMaxLength(maxLength));
             return this;

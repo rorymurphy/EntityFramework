@@ -54,9 +54,9 @@ namespace Xintricity.DataAccess
         /// <typeparam name="T"></typeparam>
         /// <param name="selector"></param>
         /// <returns></returns>
-        protected PrimitivePropertyConfiguration<T> Property<T>(Expression<Func<TEntity, T>> selector)
+        protected PropertyConfiguration<T> Property<T>(Expression<Func<TEntity, T>> selector)
         {
-            PrimitivePropertyConfiguration<T> pConfig = new PrimitivePropertyConfiguration<T>();
+            PropertyConfiguration<T> pConfig = new PropertyConfiguration<T>();
             _actions.Add(b => {
                 var p = b.Property<T>(selector);
                 pConfig.Apply(p);
@@ -70,9 +70,9 @@ namespace Xintricity.DataAccess
         /// <typeparam name="T"></typeparam>
         /// <param name="name"></param>
         /// <returns></returns>
-        protected PrimitivePropertyConfiguration<T> Property<T>(string name)
+        protected PropertyConfiguration<T> Property<T>(string name)
         {
-            PrimitivePropertyConfiguration<T> pConfig = new PrimitivePropertyConfiguration<T>();
+            PropertyConfiguration<T> pConfig = new PropertyConfiguration<T>();
             _actions.Add(b => {
                 var p = b.Property<T>(name);
                 pConfig.Apply(p);

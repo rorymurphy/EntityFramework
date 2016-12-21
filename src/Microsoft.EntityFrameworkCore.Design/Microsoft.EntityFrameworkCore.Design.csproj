@@ -85,7 +85,7 @@
     <Compile Include="EntityTypeConfiguration\ManyNavigationPropertyConfiguration.cs" />
     <Compile Include="EntityTypeConfiguration\ManyToManyNavigationPropertyConfiguration.cs" />
     <Compile Include="EntityTypeConfiguration\ModelBuilderExtensions.cs" />
-    <Compile Include="EntityTypeConfiguration\PrimitivePropertyConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\PropertyConfiguration.cs" />
     <Compile Include="EntityTypeConfiguration\ReferenceNavigationConfiguration.cs" />
     <Compile Include="Infrastructure\DesignEventId.cs" />
     <Compile Include="Internal\DesignLoggerExtensions.cs" />
